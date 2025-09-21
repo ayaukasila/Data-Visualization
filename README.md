@@ -104,7 +104,7 @@ main.py connects to the DB, runs a few queries and prints results. Example:
 python main.py
 
 
-Example output:
+### Example output:
 
    count
 0  99441
@@ -116,7 +116,7 @@ Example output:
 3      voucher   65.703354
 4  credit_card  163.319021
 
-Tools & resources
+### Tools & resources
 
 PostgreSQL 16 (server)
 
@@ -130,7 +130,7 @@ Apache Superset (optional dashboard)
 
 VS Code / PyCharm for editing
 
-Project author
+### Project author
 
 Ayaulym Orynbassarova
 Astana IT University
