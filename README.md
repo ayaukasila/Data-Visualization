@@ -10,7 +10,7 @@ The goal is to perform **sales and logistics analytics**: customer behavior, sel
 
 ## ERD Diagram  
 
-![ERD](images/erd.png)  
+![ERD](images/ERD.png)  
 
 ---
 
