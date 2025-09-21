@@ -1,78 +1,64 @@
-# Data-Visualization
-Olist E-commerce Analytics
-Olist is a large Brazilian e-commerce marketplace that connects small businesses to major online platforms. The company provides sellers with infrastructure for managing products, orders, logistics, and payments.
-As a data analyst, my role is to analyze sales, payments, customer behavior, and logistics to uncover insights that support business decisions.
+# Data-Visualization  
+Olist E-commerce Analytics  
 
-Project Overview
+Olist is a Brazilian e-commerce marketplace that connects small businesses with major online platforms.  
+This repository contains a **data analytics project** for the Olist e-commerce dataset (orders, customers, sellers, products, reviews, payments, geolocation).  
 
-This project builds a PostgreSQL database from the Olist e-commerce dataset (orders, customers, sellers, payments, reviews, products)
-The goal is to perform structured analytics, create an ERD schema, and write queries to answer key business questions.
+The goal is to perform **sales and logistics analytics**: customer behavior, seller activity, order statistics, payment types, delivery times, product categories, and review scores.  
 
-The project includes:
+---
 
-Database ERD schema with relationships 
+## ERD Diagram  
 
-SQL queries 
+![ERD](images/erd.png)  
 
-Python script to run queries directly from PostgreSQL
+---
 
-Tools & Technologies
+## Dataset  
 
-PostgreSQL 
+Files (CSV) used in the project (stored in `archive/`):  
 
-Python 3.12
+- `orders.csv` — order details and timestamps  
+- `customers.csv` — customer demographic and location data  
+- `sellers.csv` — seller information  
+- `products.csv` — product metadata and categories  
+- `order_items.csv` — products included in orders  
+- `order_payments.csv` — payments and methods used  
+- `order_reviews.csv` — reviews and ratings from customers  
+- `geolocation.csv` — customer and seller locations  
+- `category_translation.csv` — translation of product categories into English  
 
-psycopg2 
+---
 
-pandas 
+## Contents of the repository  
 
-SQLAlchemy
+- `schema.sql` — CREATE TABLE statements for all tables (with primary and foreign keys)  
+- `queries.sql` — 10 analytical SQL queries (with comments)  
+- `main.py` — Python script to connect to the DB and run sample queries  
+- `requirements.txt` — Python dependencies  
+- `archive/` — CSV files (not included in repo if large)  
+- `images/` — ER diagram and screenshots of query results  
+- `data.sql` — SQL commands to import CSV files into PostgreSQL  
 
-pgAdmin 
+---
 
-GitHub
+## Quick setup & run instructions  
 
-Project Structure
-Olist-Analytics/
- ┣ main.py              # Python script for running SQL queries
- ┣ queries.sql          # 10 SQL queries with comments
- ┣ erd.png              # ERD diagram of the database
- ┣ README.md            # Documentation
+### 1. Prerequisites  
+- macOS / Linux / Windows  
+- PostgreSQL 16 (or compatible) installed and running  
+- pgAdmin (optional, for GUI and ERD)  
+- Python 3.12+  
+- Git and optionally the GitHub CLI (`gh`)  
 
+---
 
+### 2. Create virtual environment and install dependencies  
+```bash
+# in project folder
+python3 -m venv venv
+source venv/bin/activate    # macOS / Linux
+# Windows PowerShell:
+.\venv\Scripts\Activate.ps1
 
-Running Python Script
-
-Install dependencies:
-
-pip install psycopg2 pandas sqlalchemy
-
-
-Run script:
-
-python3 main.py
-
-
-
-ERD Schema
-
-The ERD shows all tables (orders, order_items, products, customers, sellers, geolocation, payments, reviews, category_translation) and their relationships via primary/foreign keys.
-
-
-
-How to Run the Project
-
-Clone repository:
-
-git clone https://github.com/yourusername/Data_Visualization.git
-cd Olist-Analytics
-
-
-Set up PostgreSQL database:
-
-psql -U postgres -d ecommerce -f queries.sql
-
-
-Run Python script:
-
-python3 main.py
+pip install -r requirements.txt
