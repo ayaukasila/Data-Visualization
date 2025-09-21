@@ -42,7 +42,7 @@ Files (CSV) used in the project (stored in `db/`):
 ---
 ## Queries
 
-![1] (images/1.png)  
+![1](images/1.png)  
 
 
 -
