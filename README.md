@@ -38,12 +38,14 @@ Files (CSV) used in the project (stored in `db/`):
 - `db/` — CSV files 
 - `images/` — ER diagram and screenshots of query results  
 - `data.sql` — SQL commands to import CSV files into PostgreSQL  
-ss
+
 ---
 ## Queries
 
-
 (images/1.png)  
+
+
+-
 ---
 
 ## Quick setup & run instructions  
